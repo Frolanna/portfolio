@@ -6,7 +6,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, "dist"),
         filename: "bundle.js",
-        publicPath: "/"
+        publicPath: "/",
+        hotUpdateChunkFilename: 'hot/hot-update.js',
+        hotUpdateMainFilename: 'hot/hot-update.json'
     }, 
     devServer: {
       contentBase: './dist',

@@ -1,5 +1,3 @@
-$body-color: rgb(0, 38, 255);
+@import "_main.scss";
+@import "_header.scss";
 
-body {
-  color: $body-color;
-}

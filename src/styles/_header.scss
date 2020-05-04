@@ -1,0 +1,44 @@
+#header{
+    background-color: #d5cfd6;
+
+    &::after{
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
+    .header-nav{
+        margin: 0;
+        padding: 0;
+        float: right;
+
+        .header-nav-item{
+            display: inline-block;         
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            a{
+                margin: 20px;
+            }
+
+            &:after{
+                display:block;
+                content: '';
+                border-bottom: solid 4px #000000;  
+                transform: scaleX(0);  
+                transition: transform 350ms ease-in-out;
+                height: 20px;
+                margin-bottom: -20px;
+            }
+
+            &.active, &:hover{
+                &:after{
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}

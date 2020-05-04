@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 
 import _ from 'lodash';
 
+import App from "./components/App";
+
 import '../styles/style.scss';
 
-const title = 'My Simple Express React Webpack Babel Setup Environment';
-
 ReactDOM.render(
-  <div>{title}</div>,
+  <App/>,
   document.getElementById('app')
 );
