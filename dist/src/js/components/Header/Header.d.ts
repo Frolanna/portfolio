@@ -5,7 +5,7 @@ export interface HeaderState {
 }
 export interface HeaderProps {
     headerNavItems: HeaderItemProps[];
-    activateHeaderNavItem: (headerNavItems: HeaderItemProps[]) => void;
+    activateHeaderNavItem: (headerNavItems: HeaderItemProps[], activeItemIndex: number) => void;
 }
 export default class Header extends React.Component<HeaderProps, {}> {
     activateHeaderItem(event: React.MouseEvent<HTMLLIElement>, index: number): void;

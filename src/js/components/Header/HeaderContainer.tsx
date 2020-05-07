@@ -1,9 +1,7 @@
 import React from "react";
 
-import { HeaderItemProps } from "../HeaderItem/HeaderItem";
 import { connect, ConnectedProps  } from "react-redux";
 
-import { defaultState } from "../../store/Header/reducers";
 import { activateHeaderNavItem } from "../../store/Header/actions";
 import Header from "./Header";
 

@@ -1,4 +1,10 @@
 import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 import {HeaderItem} from "../HeaderItem/HeaderItem";
 import {HeaderItemProps} from "../HeaderItem/HeaderItem";
@@ -9,16 +15,14 @@ export interface HeaderState {
 
 export interface HeaderProps {
     headerNavItems: HeaderItemProps[],
-    activateHeaderNavItem: (headerNavItems: HeaderItemProps[]) => void ;
+    activateHeaderNavItem: (headerNavItems: HeaderItemProps[], activeItemIndex: number) => void ;
 }
 
 export default class Header extends React.Component<HeaderProps, {}> {
     activateHeaderItem(event: React.MouseEvent<HTMLLIElement>, index: number){
         console.log(index);
 
-        let items : HeaderItemProps[] = [...this.props.headerNavItems];
-        items.forEach((item, i) => item.isActive = (i == index ? true : false));
-        this.props.activateHeaderNavItem(items);
+        this.props.activateHeaderNavItem(this.props.headerNavItems, index);
     }
 
     render() {    
@@ -33,6 +37,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
         )
         return (
             <header id="header">
+                <Router>
                 <div className="row">
                     <nav>
                         <ul className="header-nav">
@@ -40,6 +45,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
                         </ul>
                     </nav>
                 </div>
+                </Router>
             </header>
         );
     }

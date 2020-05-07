@@ -4,10 +4,12 @@ export const HEADER_NAV_ITEM_ACTIVATE = 'HEADER_NAV_ITEM_ACTIVATE';
 
 export interface HeaderNavItemAction {
     type: string;
-    headerNavItems: HeaderItemProps[]
+    headerNavItems: HeaderItemProps[],
+    activeItemIndex: number
 }
 
-export const activateHeaderNavItem = (headerNavItems: HeaderItemProps[]): HeaderNavItemAction => ({
+export const activateHeaderNavItem = (headerNavItems: HeaderItemProps[], activeItemIndex: number): HeaderNavItemAction => ({
     type: HEADER_NAV_ITEM_ACTIVATE,
-    headerNavItems
+    headerNavItems,
+    activeItemIndex
 });

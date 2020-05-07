@@ -1,6 +1,7 @@
 import { HeaderState } from "../../components/Header/Header";
 import { HEADER_NAV_ITEM_ACTIVATE } from "./actions"
 import { HeaderNavItemAction } from "./actions"
+import { HeaderItemProps } from "../../components/HeaderItem/HeaderItem";
 
 export const defaultState: HeaderState = {
     headerNavItems: [
@@ -14,9 +15,13 @@ export const defaultState: HeaderState = {
 export const headerReducer = (state: HeaderState = defaultState, action: HeaderNavItemAction): HeaderState => {
     switch (action.type){
         case HEADER_NAV_ITEM_ACTIVATE:
+            
+        let items : HeaderItemProps[] = [...action.headerNavItems];
+        items.forEach((item, i) => item.isActive = (i == action.activeItemIndex ? true : false));
+        
             return {
                 ...state,
-                headerNavItems: action.headerNavItems
+                headerNavItems: items
             };
     }
     return state;
