@@ -1,5 +1,5 @@
 #header{
-    background-color: #d5cfd6;
+    background-color: $header-color;
 
     &::after{
         content: " ";
@@ -15,23 +15,21 @@
 
         .header-nav-item{
             display: inline-block;         
-            padding: 20px 0;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
 
             a{
-                margin: 20px;
+                padding: 20px;
+                display: inline-block;
             }
 
             &:after{
                 display:block;
                 content: '';
-                border-bottom: solid 4px #000000;  
+                border-bottom: solid 4px $line-color;  
                 transform: scaleX(0);  
                 transition: transform 350ms ease-in-out;
-                height: 20px;
-                margin-bottom: -20px;
             }
 
             &.active, &:hover{

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 $font-family: 'Roboto', sans-serif;
 $font-size: 14px;
+$text-color: #000;
+$line-color:  #000;
+$list-style-type: square;
+$header-color:  #d5cfd6;
 
 body {
   margin: 0;
@@ -9,13 +13,17 @@ body {
 
   a{
     text-decoration: none;
-    color: #000;
+    color: $text-color;
     cursor: pointer;
   }
 
   .row{
     max-width: 1000px;
     margin: auto;
+
+    h1{
+      position: relative;
+    }
   }
 }
 

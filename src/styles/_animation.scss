@@ -1,0 +1,26 @@
+.left-to-right-appear {
+    right: 200%;
+  }
+  
+  .left-to-right-appear.left-to-right-appear-active {
+      right: 0%;
+      transition: right .5s ease-out;
+  }
+
+  .right-to-left-appear {
+    left: 200%;
+  }
+  
+  .right-to-left-appear.right-to-left-appear-active {
+      left: 0%;
+      transition: left .5s ease-out;
+  }
+
+  .opacity-appear {
+    opacity: 0;
+  }
+  
+  .opacity-appear.opacity-appear-active {
+      opacity: 1;
+      transition: opacity 1s ease-out 0.5s;
+  }

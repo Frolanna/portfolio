@@ -1,21 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
-import { HeaderProps } from "./Header"
+import { About } from "./About";
+import { Hobby } from "./Hobby";
 
 export default class App extends React.Component {
     render() {
-        const header: HeaderProps = {
-            headerNavItems: [
-                { text: "Ссылка 1", url: "#", isActive: true },
-                { text: "Ссылка 2", url: "#", isActive: false },
-                { text: "Ссылка 3", url: "#", isActive: false },
-                { text: "Ссылка 4", url: "#", isActive: false }
-            ]
-        };
-
         return (
-            <Header headerNavItems={header.headerNavItems} />
+            <Router>
+                <Header/>   
+                <div className="main">       
+                    <Switch>
+                        <Route path="/" exact component={About} />
+                        <Route path="/hobby" exact component={Hobby} />
+                    </Switch>
+                </div>  
+            </Router>
         );
     }
 }
