@@ -1,21 +1,24 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
-import { About } from "./About";
-import { Hobby } from "./Hobby";
+
+const About = lazy(() => import('./About'));
+const Skills = lazy(() => import('./Skills'));
 
 export default class App extends React.Component {
     render() {
         return (
             <Router>
-                <Header/>   
-                <div className="main">       
-                    <Switch>
-                        <Route path="/" exact component={About} />
-                        <Route path="/hobby" exact component={Hobby} />
-                    </Switch>
-                </div>  
+                <Header />
+                <div className="main">
+                    <Suspense fallback={<div>Загрузка...</div>}>
+                        <Switch>
+                            <Route path="/" exact component={About} />
+                            <Route path="/skills" exact component={Skills} />
+                        </Switch>
+                    </Suspense>
+                </div>
             </Router>
         );
     }
