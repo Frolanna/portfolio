@@ -1,0 +1,31 @@
+#main-skills{
+    .charts-skills{
+        height: 200px;
+    }
+    .skills-description{
+        background-color: $block-color; 
+        padding: 20px;   
+
+        .skills-images{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .skills-image{
+                height: 70px;
+                background-color: $body-background-color;
+                padding: 5px 10px;
+                margin: 5px;
+                border: 1px solid $border-color;
+
+                img {
+                    height: 70px;
+                }
+            }           
+        }
+
+        .skills-text{
+            padding: 20px 5px 0 5px;
+        }
+    }
+}

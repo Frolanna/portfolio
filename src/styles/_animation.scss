@@ -24,3 +24,13 @@
       opacity: 1;
       transition: opacity 1s ease-out 0.5s;
   }
+
+  .opacity-enter {
+    opacity: 0;
+  }
+  
+  .opacity-enter.opacity-enter-active {
+    opacity: 1;
+    transition: opacity .3s ease-out;
+  }
+  

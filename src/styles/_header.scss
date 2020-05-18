@@ -22,6 +22,7 @@
             a{
                 padding: 20px;
                 display: inline-block;
+                color: $header-text-color;
             }
 
             &:after{
@@ -30,6 +31,7 @@
                 border-bottom: solid 4px $line-color;  
                 transform: scaleX(0);  
                 transition: transform 350ms ease-in-out;
+                background-color: $line-color;
             }
 
             &.active, &:hover{

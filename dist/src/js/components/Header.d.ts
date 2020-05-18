@@ -5,6 +5,7 @@ export interface HeaderState {
 }
 export default class Header extends React.Component<{}, HeaderState> {
     constructor(props: HeaderState);
+    componentWillMount(): void;
     activateHeaderItem(event: React.MouseEvent<HTMLLIElement>, index: number): void;
     render(): JSX.Element;
 }

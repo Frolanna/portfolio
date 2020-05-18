@@ -13,18 +13,23 @@ export default class Header extends React.Component<{}, HeaderState> {
 
         this.state = {
             headerNavItems: [
-                { text: "Обо мне", url: "/", isActive: true },
+                { text: "Обо мне", url: "/", isActive: false },
                 { text: "Навыки", url: "/skills", isActive: false },
-                { text: "Хобби", url: "/hobby", isActive: false },
-                { text: "Ссылка 4", url: "#", isActive: false }
+                { text: "Совместимость", url: "/test", isActive: false }
             ]
         };
 
         this.activateHeaderItem = this.activateHeaderItem.bind(this);
     }
 
+    componentWillMount(){
+        var currentPath = window.location.pathname;
+        let items: HeaderItemProps[] = [...this.state.headerNavItems];
+        items.forEach((item) => item.isActive = (item.url == currentPath ? true : false));
+        this.setState({ headerNavItems: items });
+    }
+
     activateHeaderItem(event: React.MouseEvent<HTMLLIElement>, index: number) {
-        console.log(index);
         let items: HeaderItemProps[] = [...this.state.headerNavItems];
         items.forEach((item, i) => item.isActive = (i == index ? true : false));
         this.setState({ headerNavItems: items });

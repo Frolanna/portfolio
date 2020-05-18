@@ -1,6 +1,6 @@
 const express = require("express");
 let  app = express();
-app.get('/', function(req, res){
+app.get(/^\/[A-Za-z]*$/, function(req, res){
     res.sendfile('index.html', { root: __dirname + "/dist" } );
 });
 app.use(express.static('dist'));
