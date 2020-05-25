@@ -5,6 +5,7 @@ import Header from "./Header";
 
 const About = lazy(() => import('./About'));
 const Skills = lazy(() => import('./Skills'));
+const Test = lazy(() => import('./Test'));
 
 export default class App extends React.Component {
     render() {
@@ -12,10 +13,11 @@ export default class App extends React.Component {
             <Router>
                 <Header />
                 <div className="main">
-                    <Suspense fallback={<div>Загрузка...</div>}>
+                    <Suspense fallback={<div className="row">Загрузка...</div>}>
                         <Switch>
                             <Route path="/" exact component={About} />
                             <Route path="/skills" exact component={Skills} />
+                            <Route path="/test" exact component={Test} />
                         </Switch>
                     </Suspense>
                 </div>

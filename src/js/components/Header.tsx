@@ -47,7 +47,7 @@ export default class Header extends React.Component<{}, HeaderState> {
         )
         return (
             <header id="header">
-                <div className="row">
+                <div className="row">                   
                     <nav>
                         <ul className="header-nav">
                             {headerNavItems}

@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+$font-family: "Roboto", sans-serif;
 $font-size: 14px;
 $text-color: #ac5e27;
-$line-color:  #dc9d36;
+$line-color: #dc9d36;
 $list-style-type: square;
-$header-color:  #1d5b6a;
+$header-color: #1d5b6a;
 $header-text-color: #f9eddc;
-$body-background-color: #ffffff; 
+$body-background-color: #ffffff;
 $block-color: #f9eddc;
+$btn-color: #f9eddc;
 $border-color: #dc9d36;
+$border: 1px solid $border-color;
 
 body {
   margin: 0;
@@ -17,27 +20,49 @@ body {
   background-color: $body-background-color;
   color: $text-color;
 
-  a{
-    text-decoration: none;   
+  a {
+    text-decoration: none;
     cursor: pointer;
   }
 
-  .row{
+  .row {
     max-width: 1000px;
     margin: auto;
 
-    h1{
+    h1 {
       position: relative;
     }
   }
 
-  hr{
+  hr {
     margin: 30px 0;
     height: 4px;
     background-color: $line-color;
     border: none;
   }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $btn-color;
+    border: $border;
+    transition: background-color 0.5s ease-out;
+    color: $text-color;
+    font-family: $font-family;
+
+    &:hover,
+    &:focus {
+      background-color: $header-color;
+      color: $btn-color;
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
 }
-
-
-

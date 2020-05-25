@@ -1,0 +1,12 @@
+{
+    "correctAnswers": [
+        {
+            "questionId": 1,
+            "answerId": 2
+        },
+        {
+            "questionId": 2,
+            "answerId": 6
+        }
+    ]
+}

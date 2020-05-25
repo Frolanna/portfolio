@@ -1,0 +1,55 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "text": "Кем вы мечтали стать в детстве?",
+            "availableAnswers": [
+                {
+                    "id": 1,
+                    "text": "Программистом"
+                },
+                {
+                    "id": 2,
+                    "text": "Журналистом"
+                },
+                {
+                    "id": 3,
+                    "text": "Космонавтом"
+                },
+                {
+                    "id": 4,
+                    "text": "Динозавром"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "text": "Какой покемон самый крутой?",
+            "availableAnswers": [
+                {
+                    "id": 5,
+                    "text": "Пикачу",
+                    "image": "https://i.pinimg.com/originals/e0/52/84/e052843d26abc6d1cbfb61f858eb66a0.jpg",
+                    "label": "Пикачу"
+                },
+                {
+                    "id": 6,
+                    "text": "",
+                    "image": "https://img.anews.com/media/gallery/119232054/279276912.jpg",
+                    "label": "Слоупок"
+                },
+                {
+                    "id": 7,
+                    "text": "",
+                    "image": "https://i.pinimg.com/originals/ba/1d/37/ba1d3778a33091a234236774a78151e7.png",
+                    "label": "Псайдак"
+                },
+                {
+                    "id": 8,
+                    "text": "",
+                    "image": "https://all-t-shirts.ru/goods_images/ru122130II000ff30ce97ac2e72adb95f5ce30b6bf051.jpg",
+                    "label": "Бульбазавр"
+                }
+            ]}
+    ]
+}

@@ -1,53 +1,61 @@
-#main-about{
-.main-text{
-    box-sizing: border-box;
-    padding: 0 20px 0 0;
-    width: 60%;
-
-    .main-text-list{
-        list-style-type: $list-style-type;
-        
-        li{
-            margin-bottom: 8px;
-        }
-    }
-}
-
-img {
-    border: 1px solid #dc9d36;
-}
-
-.main-img{
-    width: 40%;
-    img{
-        width: 100%;       
-    }
-}
-
-.main-text, .main-img{
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-}
-
-#main-slider{
-    .slick-slide {
-        width: 180px !important;
-        padding: 20px 10px;
+#main-about {
+    .main-text {
         box-sizing: border-box;
-        opacity: 0.5;
-        transition: all 0.5s ease-out;
+        padding: 0 20px 0 0;
+        width: 60%;
 
-        &.slick-current{
-            width: 200px !important;
-            opacity: 1;
-            padding: 10px;
+        .main-text-list {
+            list-style-type: $list-style-type;
+
+            li {
+                margin-bottom: 8px;
+            }
         }
     }
 
-    .slick-prev:before, .slick-next:before { 
-        color:rgb(0, 0, 0) !important;
+    img {
+        border: $border;
     }
-}
 
+    .main-img {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .main-text,
+    .main-img {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    #main-slider {
+        .slick-slide {
+            width: 180px !important;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            opacity: 0.5;
+            transition: all 0.5s ease-out;
+
+            &.slick-current {
+                width: 200px !important;
+                opacity: 1;
+                padding: 10px;
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            &:before {
+                transition: color 0.5s ease-out;
+                color: $text-color !important;
+            }
+
+            &:hover:before {
+                color: $header-color !important;
+            }
+        }
+    }
 }

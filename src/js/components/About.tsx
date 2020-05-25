@@ -37,7 +37,7 @@ export default class About extends React.Component<{}, {}> {
         super(props);
     }
 
-    render() {       
+    render() {
         let list = listData.map((item) =>
             <li key={item.id}><b>{item.header}:</b> {item.data}</li>
         );
@@ -49,8 +49,8 @@ export default class About extends React.Component<{}, {}> {
 
         return (
             <div id="main-about" className="row">
+                <h1>Обо мне</h1>
                 <ReactCSSTransitionGroup {...transitionProps} transitionName="left-to-right">
-                    <h1>Обо мне</h1>
                     <div className="main-text">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Debitis, accusamus. Consequatur culpa omnis distinctio eligendi nobis ea molestias et dolorum,

@@ -94,10 +94,10 @@ export default class Skills extends React.Component<{}, ChartDataPoints> {
                 <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity" >
                     <div key={this.state.selected} className="skills-description">
                         <div className="skills-images">
-                            {images ? images : ""}
+                            {images}
                         </div>
                         <div className="skills-text">
-                            {text ? text : ""}
+                            {text}
                         </div>
                     </div>
                 </ReactCSSTransitionGroup>

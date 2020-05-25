@@ -1,0 +1,39 @@
+#main-test{
+    .test-description{
+        margin-bottom: 20px;
+    }
+    .test-start{
+        text-align: center;
+    }
+
+    .test-answers{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        justify-content: center;    
+
+        .test-answer{
+            margin: 10px;
+            padding: 20px;
+            font-size: 1em;
+            font-weight: normal;
+
+            .test-answer-img{
+                max-width: 200px;
+                max-height: 200px;
+                display: block;
+                margin: auto;
+                border: $border;
+
+                & ~ .test-answer-text{
+                    margin-top: 10px;
+                }
+            }
+
+            .test-answer-text{
+                display: inline-block;
+            }
+        }
+    }
+}
