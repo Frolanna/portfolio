@@ -1,19 +1,19 @@
-#main-skills{
-    .charts-skills{
+#main-skills {
+    .charts-skills {
         height: 200px;
     }
-    .skills-description{
-        background-color: $block-color; 
-        padding: 20px;   
+    .skills-description {
+        background-color: $color4;
+        padding: 20px;
 
-        .skills-images{
+        .skills-images {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
 
-            .skills-image{
+            .skills-image {
                 height: 70px;
-                background-color: $body-background-color;
+                background-color: $color5;
                 padding: 10px;
                 margin: 5px;
                 border: $border;
@@ -21,10 +21,10 @@
                 img {
                     height: 70px;
                 }
-            }           
+            }
         }
 
-        .skills-text{
+        .skills-text {
             padding: 20px 5px 0 5px;
         }
     }

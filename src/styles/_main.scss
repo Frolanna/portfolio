@@ -2,23 +2,21 @@
 
 $font-family: "Roboto", sans-serif;
 $font-size: 14px;
-$text-color: #ac5e27;
-$line-color: #dc9d36;
+$color1: #ac5e27;
+$color2: #dc9d36;
+$color3: #1d5b6a;
+$color4: #f9eddc;
+$color5: #ffffff;
+$color6: #dc9d36;
 $list-style-type: square;
-$header-color: #1d5b6a;
-$header-text-color: #f9eddc;
-$body-background-color: #ffffff;
-$block-color: #f9eddc;
-$btn-color: #f9eddc;
-$border-color: #dc9d36;
-$border: 1px solid $border-color;
+$border: 1px solid $color6;
 
 body {
   margin: 0;
   font-family: $font-family;
   font-size: $font-size;
-  background-color: $body-background-color;
-  color: $text-color;
+  background-color: $color5;
+  color: $color1;
 
   a {
     text-decoration: none;
@@ -37,7 +35,7 @@ body {
   hr {
     margin: 30px 0;
     height: 4px;
-    background-color: $line-color;
+    background-color: $color2;
     border: none;
   }
 
@@ -48,16 +46,16 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
-    background-color: $btn-color;
+    background-color: $color4;
     border: $border;
     transition: background-color 0.5s ease-out;
-    color: $text-color;
+    color: $color1;
     font-family: $font-family;
 
     &:hover,
     &:focus {
-      background-color: $header-color;
-      color: $btn-color;
+      background-color: $color3;
+      color: $color4;
       outline: none;
     }
 

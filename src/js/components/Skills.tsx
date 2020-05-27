@@ -16,14 +16,25 @@ interface ChartDataPoint {
 }
 
 interface skillDescription {
-    label: string, images: string[], text: string
+    label: string, images?: string[], text: string
 }
 
+const imageIconDir = "./images/skill_icons/";
+
 const skillDescriptions: skillDescription[] = [
-    { label: "Apple", images: ["./images/skill_icons/csharp.png"], text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat, sunt temporibus explicabo adipisci nam nihil cupiditate sed cum totam dolorem reprehenderit a soluta! Hic autem quam facilis dolore totam." },
-    { label: "Orange", images: ["./images/skill_icons/redux.png"], text: ";kk jsn;askjn kmnlaks" },
-    { label: "Banana", images: ["./images/skill_icons/sharepoint.png"], text: "" }
+    { label: "JS/TS", images: ["javascript.png", "typescript.png"], text: "Умею работать как с чистым JS, так и использованием jQuery. TypeScript изучала самостоятельно." },
+    { label: "HTML/CSS", images: ["html.png", "css.png", "sass.png"], text: "Знаю HTML5, CSS3, люблю использовать flexbox, изучала grid layout. Знакома с языками Less и Sass." },
+    { label: "React", images: ["react.png"], text: "Хорошо знаю React, изучала его в университете и использовала на прошлой работе." },
+    { label: "Redux", images: ["redux.png"], text: "Изучала Redux самостоятельно, к сожалению, практического опыта использования пока не много." },
+    { label: "SQL", images: ["mssql.png"], text: "Работала с MS SQL, писала простые запросы и процедуры, создавала отчеты через SQL Server Reporting Services." },
+    { label: "Backend", images: ["aspnet.png", "csharp.png", "sharepoint.png"], text: "На прошлом месте работала с Sharepoint 2013, 2016 на ASP.NET WebForms. Помимо этого есть опыт написания приложений на Node.js, Java, немного PHP." },
+    { label: "Gulp/Webpack", images: ["gulp.png", "webpack.png"], text: "Умею настраивать сборку проектов через Webpack. C Gulp последний раз работала достаточно давно, ещё в университете, но вспомнить не будет проблемой :)" },
+    { label: "VCS", images: ["git.png", "mercurial.png", "tfs.jpg"], text: "На прошлой работе использовали TFVC (централизованная система контроля версий), но так же хорошо знаю Git и имею небольшой опыт работы с Mercurial. " },
+    { label: "Английский", text: "Английский на уровне чтения документации :)" }
 ];
+
+const chartColor = "#dc9d36";
+const chartSelectedColor = "#ac5e27";
 
 const transitionProps = {
     transitionEnter: true,
@@ -38,13 +49,17 @@ export default class Skills extends React.Component<{}, ChartDataPoints> {
         super(props);
 
         this.state = {
-            selected: "Apple",
+            selected: "JS/TS",
             dataPoints: [
-                { label: "Apple", y: 30, color: '#ac5e27' },
-                { label: "Orange", y: 57, color: '#dc9d36' },
-                { label: "Banana", y: 23, color: '#dc9d36' },
-                { label: "Mango", y: 88, color: '#dc9d36' },
-                { label: "Grape", y: 67, color: '#dc9d36' }
+                { label: "JS/TS", y: 85, color: chartSelectedColor },
+                { label: "React", y: 85, color: chartColor },
+                { label: "HTML/CSS", y: 75, color: chartColor },
+                { label: "VCS", y: 70, color: chartColor },
+                { label: "Backend", y: 65, color: chartColor },
+                { label: "Redux", y: 55, color: chartColor },
+                { label: "Gulp/Webpack", y: 50, color: chartColor },  
+                { label: "SQL", y: 40, color: chartColor },                                           
+                { label: "Английский", y: 40, color: chartColor }
             ]
         };
     }
@@ -80,7 +95,7 @@ export default class Skills extends React.Component<{}, ChartDataPoints> {
         };
 
         let description = skillDescriptions.find((item) => item.label === this.state.selected);
-        let images = description?.images.map((item, index) => <div key={item} className="skills-image"><img src={`${item}`} /></div>)
+        let images = description?.images?.map((item, index) => <div key={item} className="skills-image"><img src={`${imageIconDir}${item}`} /></div>)
         let text = description?.text;
 
         return (

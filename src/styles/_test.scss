@@ -1,38 +1,37 @@
-#main-test{
-    .test-description{
+#main-test {
+    .test-description {
         margin-bottom: 20px;
     }
-    .test-start{
+    .test-start {
         text-align: center;
     }
 
-    .test-answers{
+    .test-answers {
         display: grid;
         grid-template-columns: 40% 40%;
         grid-auto-flow: row;
         grid-auto-rows: auto;
-        justify-content: center;    
+        justify-content: center;
 
-        .test-answer{
+        .test-answer {
             margin: 10px;
             padding: 20px;
             font-size: 1em;
             font-weight: normal;
 
-            .test-answer-img{
+            .test-answer-text {
+                display: inline-block;
+            }
+
+            .test-answer-img {
                 max-width: 200px;
                 max-height: 200px;
                 display: block;
                 margin: auto;
-                border: $border;
 
-                & ~ .test-answer-text{
+                & ~ .test-answer-text {
                     margin-top: 10px;
                 }
-            }
-
-            .test-answer-text{
-                display: inline-block;
             }
         }
     }

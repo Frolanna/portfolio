@@ -1,41 +1,42 @@
-#header{
-    background-color: $header-color;
+#header {
+    background-color: $color3;
 
-    &::after{
+    &:after {
         content: " ";
         display: block;
         height: 0;
         clear: both;
     }
 
-    .header-nav{
+    .header-nav {
         margin: 0;
         padding: 0;
         float: right;
 
-        .header-nav-item{
-            display: inline-block;         
+        .header-nav-item {
+            display: inline-block;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
 
-            a{
+            a {
                 padding: 20px;
                 display: inline-block;
-                color: $header-text-color;
+                color: $color4;
             }
 
-            &:after{
-                display:block;
-                content: '';
-                border-bottom: solid 4px $line-color;  
-                transform: scaleX(0);  
+            &:after {
+                display: block;
+                content: "";
+                border-bottom: solid 4px $color2;
+                transform: scaleX(0);
                 transition: transform 350ms ease-in-out;
-                background-color: $line-color;
+                background-color: $color2;
             }
 
-            &.active, &:hover{
-                &:after{
+            &.active,
+            &:hover {
+                &:after {
                     transform: scaleX(1);
                 }
             }

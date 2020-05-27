@@ -7,10 +7,11 @@ interface ListData {
 };
 
 const listData: Array<ListData> = [
-    { id: 0, header: 'Город', data: '' },
-    { id: 1, header: 'Образование', data: '' },
-    { id: 2, header: 'Опыт работы', data: '' },
-    { id: 3, header: 'Email', data: '' }
+    { id: 0, header: 'Город', data: 'Волгоград' },
+    { id: 1, header: 'Возраста', data: '24 года' },
+    { id: 2, header: 'Образование', data: '2018 г. - Волгоградский государственный технический университет, факультет Электроники и вычислительной техники, направление Программная инженерия' },
+    { id: 3, header: 'Опыт работы', data: '1.5 года full stack разработчиком Sharepoint на ASP.NET WebForms'},
+    { id: 4, header: 'Email', data: 'frolann23@gmail.com' }
 ];
 
 const sliderSettings = {
@@ -52,9 +53,7 @@ export default class About extends React.Component<{}, {}> {
                 <h1>Обо мне</h1>
                 <ReactCSSTransitionGroup {...transitionProps} transitionName="left-to-right">
                     <div className="main-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Debitis, accusamus. Consequatur culpa omnis distinctio eligendi nobis ea molestias et dolorum,
-                        tempore corporis enim, error eveniet unde, temporibus accusantium qui earum?
+                        Привет! Меня зовут Фролова Анна. На данный момент проживаю в г. Волгоград, но планирую переехать в Москву, как только снимут режим самоизоляции. Работала full stack разработчиком Sharepoint. Сейчас решила углубиться во frontend, т.к. хочется создавать прекрасное :)
                         <ul className="main-text-list">
                             {list}
                         </ul>

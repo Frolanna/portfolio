@@ -50,11 +50,11 @@
         .slick-next {
             &:before {
                 transition: color 0.5s ease-out;
-                color: $text-color !important;
+                color: $color1 !important;
             }
 
             &:hover:before {
-                color: $header-color !important;
+                color: $color3 !important;
             }
         }
     }

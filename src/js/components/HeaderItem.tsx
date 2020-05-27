@@ -5,7 +5,7 @@ export interface HeaderItemProps {
     text: string;
     url: string;
     isActive: boolean;
-    activateHeaderItem?: (event: React.MouseEvent<HTMLLIElement>) => void ;
+    activateHeaderItem?: (event: React.MouseEvent<HTMLLIElement>) => void;
 }
 
 export class HeaderItem extends React.Component<HeaderItemProps, {}> {

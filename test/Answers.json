@@ -2,11 +2,51 @@
     "correctAnswers": [
         {
             "questionId": 1,
-            "answerId": 2
+            "answerId": 4
         },
         {
             "questionId": 2,
             "answerId": 6
+        },
+        {
+            "questionId": 3,
+            "answerId": 10
+        },
+        {
+            "questionId": 4,
+            "answerId": 11
+        },
+        {
+            "questionId": 5,
+            "answerId": 15
+        },
+        {
+            "questionId": 6,
+            "answerId": 21
+        },
+        {
+            "questionId": 7,
+            "answerId": 24
+        },
+        {
+            "questionId": 8,
+            "answerId": 27
+        },
+        {
+            "questionId": 9,
+            "answerId": 30
+        },
+        {
+            "questionId": 10,
+            "answerId": 36
+        },
+        {
+            "questionId": 11,
+            "answerId": 39
+        },
+        {
+            "questionId": 12,
+            "answerId": 45
         }
     ]
 }

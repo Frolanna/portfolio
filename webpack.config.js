@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "js", "index.tsx"),
@@ -75,7 +76,11 @@ module.exports = {
         from: 'src/images',
         to: 'images'
       }
-    ])
+    ]),
+    new StyleLintPlugin({
+      files: ['**/*.vue', '**/*.scss', '**/*.css'],
+      syntax: 'scss'
+    })
   ],
   devServer: {
     hot: true,
