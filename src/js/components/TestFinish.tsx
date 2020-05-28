@@ -24,7 +24,7 @@ export default class TestFinish extends React.Component<TestFinishProps, {}> {
         return (
             <div id="main-test" className="row">
                 <h1>Результат</h1>
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity-test" >
+                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity" >
                     <h2>
                         Количество правильных ответов {this.props.correctAnswersCount} из {this.props.commonAnswersCount}.
                 </h2>

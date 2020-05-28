@@ -38,11 +38,11 @@ export default class TestQuestion extends React.Component<TestQuestionProps, Tes
         fetch('/test/getTestQuestions')
             .then((response) => {
                 let json = response.json();
-                if(response.ok){
+                if (response.ok) {
                     return json;
                 }
-                else{
-                    return json.then(err => {throw err;});
+                else {
+                    return json.then(err => { throw err; });
                 }
             })
             .then((data) => {
@@ -76,11 +76,11 @@ export default class TestQuestion extends React.Component<TestQuestionProps, Tes
             })
             .then((response) => {
                 let json = response.json();
-                if(response.ok){
+                if (response.ok) {
                     return json;
                 }
-                else{
-                    return json.then(err => {throw err;});
+                else {
+                    return json.then(err => { throw err; });
                 }
             })
             .then((data) => {
@@ -101,14 +101,14 @@ export default class TestQuestion extends React.Component<TestQuestionProps, Tes
         return (
             <div id="main-test" className="row">
                 <h1>Вопрос {index + 1}</h1>
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity-test" >
-                    <div className="test-question">
+                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity" >
+                    <div key={question.id} className="test-question">
                         {text}
                     </div>
                 </ReactCSSTransitionGroup>
                 <hr />
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity-test" >
-                    <div className="test-answers">
+                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity" >
+                    <div key={question.id} className="test-answers">
                         {answers}
                     </div>
                 </ReactCSSTransitionGroup>

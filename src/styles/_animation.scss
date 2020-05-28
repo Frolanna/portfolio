@@ -1,27 +1,13 @@
-.left-to-right-appear {
-  right: 200%;
-
-  &.left-to-right-appear-active {
-    right: 0%;
-    transition: right 0.5s ease-out;
-  }
+@mixin transition-opacity($duration, $delay) {
+  opacity: 1;
+  transition: opacity $duration ease-out $delay;
 }
 
-.right-to-left-appear {
-  left: 200%;
-
-  &.right-to-left-appear-active {
-    left: 0%;
-    transition: left 0.5s ease-out;
-  }
-}
-
-.opacity-appear {
+.opacity-delay-appear {
   opacity: 0;
 
-  &.opacity-appear-active {
-    opacity: 1;
-    transition: opacity 1s ease-out 0.5s;
+  &.opacity-delay-appear-active {
+    @include transition-opacity(1s, 0.5s);
   }
 }
 
@@ -29,16 +15,21 @@
   opacity: 0;
   
   &.opacity-enter-active {
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
+    @include transition-opacity(0.3s, 0s);
   }
 }
 
-.opacity-test-appear {
+.opacity-appear {
   opacity: 0;
 
-  &.opacity-test-appear-active {
+  &.opacity-appear-active {
+    @include transition-opacity(0.5s, 0s);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .opacity-delay-appear, .opacity-enter,.opacity-appear {
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: none;
   }
 }

@@ -14,6 +14,7 @@ export declare const transitionProps: {
     transitionLeave: boolean;
     transitionAppear: boolean;
     transitionAppearTimeout: number;
+    transitionEnterTimeout: number;
 };
 export default class Test extends React.Component<{}, TestState> {
     constructor(props: Readonly<{}>);

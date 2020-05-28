@@ -51,16 +51,13 @@ export default class About extends React.Component<{}, {}> {
         return (
             <div id="main-about" className="row">
                 <h1>Обо мне</h1>
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="left-to-right">
+                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity">
                     <div className="main-text">
                         Привет! Меня зовут Фролова Анна. На данный момент проживаю в г. Волгоград, но планирую переехать в Москву, как только снимут режим самоизоляции. Работала full stack разработчиком Sharepoint. Сейчас решила углубиться во frontend, т.к. хочется создавать прекрасное :)
                         <ul className="main-text-list">
                             {list}
                         </ul>
                     </div>
-                </ReactCSSTransitionGroup>
-
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="right-to-left" >
                     <div className="main-img">
                         <img src="./images/photo_main.jpg"></img>
                     </div>
@@ -68,7 +65,7 @@ export default class About extends React.Component<{}, {}> {
 
                 <hr />
 
-                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity" transitionAppearTimeout={1000}>
+                <ReactCSSTransitionGroup {...transitionProps} transitionName="opacity-delay" transitionAppearTimeout={1000}>
                     <div id="main-slider">
                         <Slider {...sliderSettings}>
                             {images}

@@ -15,10 +15,11 @@ interface TestState {
 }
 
 export const transitionProps = {
-    transitionEnter: false,
+    transitionEnter: true,
     transitionLeave: false,
     transitionAppear: true,
     transitionAppearTimeout: 500,
+    transitionEnterTimeout: 300,
 }
 
 export default class Test extends React.Component<{}, TestState> {

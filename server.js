@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('dist'));
 
-app.get(/^\/[A-Za-z]*$/, function (req, res) {
+app.get(/^\/[A-Za-z0-9]*$/, function (req, res) {
     res.sendfile('index.html', { root: __dirname + "/dist" });
 });
 
@@ -43,4 +43,4 @@ app.post('/test/getTestResult', function (req, res) {
     }
 });
 
-app.listen(3000, () => console.log("App listening on port 3000!"));
+app.listen(8080, () => console.log("App listening on port 8080!"));

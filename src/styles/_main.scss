@@ -10,57 +10,70 @@ $color5: #ffffff;
 $color6: #dc9d36;
 $list-style-type: square;
 $border: 1px solid $color6;
-
-body {
-  margin: 0;
+html {
   font-family: $font-family;
   font-size: $font-size;
-  background-color: $color5;
-  color: $color1;
 
-  a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .row {
-    max-width: 1000px;
-    margin: auto;
-
-    h1 {
-      position: relative;
-    }
-  }
-
-  hr {
-    margin: 30px 0;
-    height: 4px;
-    background-color: $color2;
-    border: none;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    font-size: 1.5em;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: $color4;
-    border: $border;
-    transition: background-color 0.5s ease-out;
+  body {
+    margin: 0;
+    background-color: $color5;
     color: $color1;
-    font-family: $font-family;
 
-    &:hover,
-    &:focus {
-      background-color: $color3;
-      color: $color4;
-      outline: none;
+    a {
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    &:active {
-      outline: none;
+    .row {
+      max-width: 1000px;
+      margin: auto;
+
+      h1 {
+        position: relative;
+      }
+    }
+
+    hr {
+      margin: 30px 0;
+      height: 4px;
+      background-color: $color2;
+      border: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: $color4;
+      border: $border;
+      transition: background-color 0.5s ease-out;
+      color: $color1;
+      font-family: $font-family;
+
+      &:hover,
+      &:focus {
+        background-color: $color3;
+        color: $color4;
+        outline: none;
+      }
+
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+    body {
+      .main {
+        padding: 30px;
+      }
     }
   }
 }
